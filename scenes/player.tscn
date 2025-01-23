@@ -31,7 +31,4 @@ shape = SubResource("RectangleShape2D_6k4xb")
 
 [node name="Gun" parent="." instance=ExtResource("3_3olsg")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_smoothed = true
-
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

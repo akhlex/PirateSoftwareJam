@@ -35,4 +35,4 @@ func _on_area_2d_area_entered(area):
 		HP -= 1
 		if HP <= 0:
 			print("dead")
-			HP = 5
+			HP = 3

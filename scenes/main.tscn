@@ -21,7 +21,7 @@ sources/1 = SubResource("TileSetAtlasSource_aeum6")
 
 [sub_resource type="Curve2D" id="Curve2D_ol0wy"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -566.796, -348.8, 0, 0, 0, 0, 1657.86, -348.8, 0, 0, 0, 0, 1657.86, 961.6, 0, 0, 0, 0, -577.864, 961.6, 0, 0, 0, 0, -566.796, -348.8)
+"points": PackedVector2Array(0, 0, 0, 0, -622.136, -348.8, 0, 0, 0, 0, 1004.85, -326.4, 0, 0, 0, 0, 1004.85, 625.6, 0, 0, 0, 0, -633.204, 614.4, 0, 0, 0, 0, -633.204, -348.8)
 }
 point_count = 5
 
@@ -37,17 +37,20 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 2, 1, 6553
 unique_name_in_owner = true
 position = Vector2(552, 360)
 
-[node name="Mob_Timer" type="Timer" parent="."]
-autostart = true
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2(417.684, 257.143)
+[node name="Path2D" type="Path2D" parent="Player/Camera2D"]
+position = Vector2(-134.316, -102.857)
 scale = Vector2(0.722807, 0.714286)
 curve = SubResource("Curve2D_ol0wy")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-566.796, -348.8)
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Camera2D/Path2D"]
+position = Vector2(-622.136, -348.8)
+rotation = 0.0137669
 
-[node name="Marker2D" type="Marker2D" parent="Path2D/PathFollow2D"]
+[node name="Marker2D" type="Marker2D" parent="Player/Camera2D/Path2D/PathFollow2D"]
+
+[node name="Mob_Timer" type="Timer" parent="."]
+autostart = true
 
 [connection signal="timeout" from="Mob_Timer" to="." method="_on_mob_timer_timeout"]
