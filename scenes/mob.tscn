@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck4yu6l0n8ovf"]
+
+[ext_resource type="Script" path="res://scenes/mob.gd" id="1_8n6vt"]
+[ext_resource type="Texture2D" uid="uid://pvueq3udrt67" path="res://assets/Zombie-Temp.png" id="1_ctr6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2gqv"]
+size = Vector2(37, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cum16"]
+size = Vector2(37, 70)
+
+[node name="Mob" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_8n6vt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctr6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_o2gqv")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Mob_Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob_Area"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_cum16")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="area_entered" from="Mob_Area" to="." method="_on_area_2d_area_entered"]
