@@ -16,6 +16,7 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	if area.name == "Bullet_Area":
+		$Damage_Sound.play()
 		area.get_parent().queue_free()
 		HP -= 1
 		if HP <= 0:

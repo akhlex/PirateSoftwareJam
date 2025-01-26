@@ -1,8 +1,13 @@
 extends Node2D
 
 var mob = preload("res://scenes/mob.tscn")
+@onready var hearts = $Player/Hearts_Container
+@onready var player = %Player
 
 func _ready():
+	hearts.setMaxHearts(player.max_health)
+	hearts.updateHearts(player.curr_health)
+	player.healthChanged.connect(hearts.updateHearts)
 	randomize()
 
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck4yu6l0n8ovf"]
+[gd_scene load_steps=6 format=3 uid="uid://ck4yu6l0n8ovf"]
 
 [ext_resource type="Script" path="res://scenes/mob.gd" id="1_8n6vt"]
-[ext_resource type="Texture2D" uid="uid://pvueq3udrt67" path="res://assets/Zombie-Temp.png" id="1_ctr6b"]
+[ext_resource type="Texture2D" uid="uid://pvueq3udrt67" path="res://assets/art/Zombie-Temp.png" id="2_pxpj3"]
+[ext_resource type="AudioStream" uid="uid://b07xh2k1ip1rk" path="res://assets/sfx/damage_sound.wav" id="3_npmb0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2gqv"]
 size = Vector2(37, 70)
@@ -17,7 +18,7 @@ script = ExtResource("1_8n6vt")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("1_ctr6b")
+texture = ExtResource("2_pxpj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 2)
@@ -30,6 +31,9 @@ shape = SubResource("RectangleShape2D_o2gqv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mob_Area"]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_cum16")
+
+[node name="Damage_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_npmb0")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="area_entered" from="Mob_Area" to="." method="_on_area_2d_area_entered"]

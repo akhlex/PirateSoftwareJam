@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6pnj5acnod0j"]
+[gd_scene load_steps=4 format=3 uid="uid://b6pnj5acnod0j"]
 
 [ext_resource type="Script" path="res://scenes/gun.gd" id="1_cg1x5"]
-[ext_resource type="Texture2D" uid="uid://cjwl327rd6dhm" path="res://assets/Shotgun.png" id="2_5dl2g"]
+[ext_resource type="Texture2D" uid="uid://cjwl327rd6dhm" path="res://assets/art/Shotgun.png" id="2_3t75y"]
+[ext_resource type="AudioStream" uid="uid://dleblif04ob8t" path="res://assets/sfx/shoot_sound.wav" id="3_rtr8i"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_cg1x5")
@@ -10,7 +11,10 @@ script = ExtResource("1_cg1x5")
 texture_filter = 1
 position = Vector2(16, 0)
 scale = Vector2(1.60417, 1.34375)
-texture = ExtResource("2_5dl2g")
+texture = ExtResource("2_3t75y")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(52, -3)
+
+[node name="Shoot_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rtr8i")

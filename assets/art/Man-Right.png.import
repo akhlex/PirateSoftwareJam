@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da0p1t3boljly"
-path="res://.godot/imported/Man-Right.png-59c4bb830889fd37c0e9f277959b1ccf.ctex"
+path="res://.godot/imported/Man-Right.png-4e82787e6d10ff33b7beb179fb64a56c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Man-Right.png"
-dest_files=["res://.godot/imported/Man-Right.png-59c4bb830889fd37c0e9f277959b1ccf.ctex"]
+source_file="res://assets/art/Man-Right.png"
+dest_files=["res://.godot/imported/Man-Right.png-4e82787e6d10ff33b7beb179fb64a56c.ctex"]
 
 [params]
 

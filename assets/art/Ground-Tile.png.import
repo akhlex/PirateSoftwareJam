@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjwl327rd6dhm"
-path="res://.godot/imported/Shotgun.png-cf150018dc7e57854a17f8adcfd0933f.ctex"
+uid="uid://6pxtfs61qsqx"
+path="res://.godot/imported/Ground-Tile.png-8461beec7af500c74465b727a0ca0974.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Shotgun.png"
-dest_files=["res://.godot/imported/Shotgun.png-cf150018dc7e57854a17f8adcfd0933f.ctex"]
+source_file="res://assets/art/Ground-Tile.png"
+dest_files=["res://.godot/imported/Ground-Tile.png-8461beec7af500c74465b727a0ca0974.ctex"]
 
 [params]
 
