@@ -20,6 +20,7 @@ size = Vector2(41, 80)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_rxp0y")
+knockback_taken = 75
 
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -42,3 +43,4 @@ stream = ExtResource("5_0i8qe")
 stream = ExtResource("6_sscwo")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

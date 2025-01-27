@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var FRICTION = 800
 @export var max_health = 3
 @onready var curr_health = max_health
+@export var knockback_taken = 100
 
 signal healthChanged
 
@@ -42,13 +43,23 @@ func _on_area_2d_area_entered(area):
 		curr_health -= 1
 		healthChanged.emit(curr_health)
 		$Damage_Taken_Sound.play()
+		#FIX THIS
+		position += area.position.normalized() * knockback_taken
 		
-		#$Player_Sprite.material.set_shader_parameter("opacity", 0.7)
-		#$Player_Sprite.material.set_shader_parameter("r", 1.0)
-		#$Player_Sprite.material.set_shader_parameter("g", 0.0)
-		#$Player_Sprite.material.set_shader_parameter("b", 0.0)
-		#$Player_Sprite.material.set_shader_parameter("mix_color", 0.7)
+		$Player_Sprite.material.set_shader_parameter("opacity", 0.7)
+		$Player_Sprite.material.set_shader_parameter("r", 1.0)
+		$Player_Sprite.material.set_shader_parameter("g", 0.0)
+		$Player_Sprite.material.set_shader_parameter("b", 0.0)
+		$Player_Sprite.material.set_shader_parameter("mix_color", 0.7)
 		
 		if curr_health <= 0:
 			queue_free()
 			get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+			
+	
+
+
+func _on_area_2d_area_exited(area):
+	if area.name == "Mob_Area":
+		$Player_Sprite.material.set_shader_parameter("mix_color", 0.0)
+	pass # Replace with function body.
