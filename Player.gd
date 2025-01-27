@@ -44,7 +44,9 @@ func _on_area_2d_area_entered(area):
 		healthChanged.emit(curr_health)
 		$Damage_Taken_Sound.play()
 		#FIX THIS
-		position += area.position.normalized() * knockback_taken
+		var area_dir = area.global_position.normalized()
+		print(area_dir)
+		position += area_dir * knockback_taken
 		
 		$Player_Sprite.material.set_shader_parameter("opacity", 0.7)
 		$Player_Sprite.material.set_shader_parameter("r", 1.0)
@@ -62,4 +64,3 @@ func _on_area_2d_area_entered(area):
 func _on_area_2d_area_exited(area):
 	if area.name == "Mob_Area":
 		$Player_Sprite.material.set_shader_parameter("mix_color", 0.0)
-	pass # Replace with function body.
