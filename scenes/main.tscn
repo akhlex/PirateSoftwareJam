@@ -42,6 +42,7 @@ unique_name_in_owner = true
 position = Vector2(552, 360)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
 
 [node name="Path2D" type="Path2D" parent="Player/Camera2D"]
 position = Vector2(-134.316, -102.857)

@@ -18,3 +18,9 @@ position = Vector2(52, -3)
 
 [node name="Shoot_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rtr8i")
+
+[node name="Reload_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Shoot_Timer" type="Timer" parent="."]
+one_shot = true
