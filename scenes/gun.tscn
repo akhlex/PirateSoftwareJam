@@ -10,11 +10,10 @@ script = ExtResource("1_cg1x5")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(16, 0)
-scale = Vector2(1.60417, 1.34375)
 texture = ExtResource("2_3t75y")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(52, -3)
+position = Vector2(39, -2)
 
 [node name="Shoot_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rtr8i")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var HP = 3
-@export var SPEED = 100.0
+@export var SPEED = 50.0
 var player_scene = preload("res://scenes/player.tscn")
 @onready var player = get_parent().get_node("Player")
 var player_pos

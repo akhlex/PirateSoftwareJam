@@ -16,10 +16,10 @@ shader_parameter/b = null
 shader_parameter/mix_color = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xdii"]
-size = Vector2(42, 80)
+size = Vector2(19, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6k4xb"]
-size = Vector2(41, 80)
+size = Vector2(19, 39)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_rxp0y")
@@ -27,17 +27,16 @@ script = ExtResource("1_rxp0y")
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_dcv28")
-scale = Vector2(2, 2)
 texture = ExtResource("3_vecke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_5xdii")
 
 [node name="Hurt_Box" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_Box"]
-position = Vector2(0.5, 0)
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_6k4xb")
 
 [node name="Gun" parent="." instance=ExtResource("3_3olsg")]

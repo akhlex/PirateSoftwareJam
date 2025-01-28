@@ -5,10 +5,10 @@
 [ext_resource type="AudioStream" uid="uid://b07xh2k1ip1rk" path="res://assets/sfx/damage_sound.wav" id="3_npmb0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2gqv"]
-size = Vector2(37, 70)
+size = Vector2(18, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cum16"]
-size = Vector2(37, 70)
+size = Vector2(18, 35)
 
 [node name="Mob" type="CharacterBody2D"]
 collision_mask = 0
@@ -16,11 +16,10 @@ script = ExtResource("1_8n6vt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 2)
 texture = ExtResource("2_pxpj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 2)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_o2gqv")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
@@ -28,7 +27,7 @@ shape = SubResource("RectangleShape2D_o2gqv")
 [node name="Mob_Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mob_Area"]
-position = Vector2(0.5, 2)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_cum16")
 
 [node name="Damage_Sound" type="AudioStreamPlayer2D" parent="."]
