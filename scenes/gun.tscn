@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b6pnj5acnod0j"]
 
 [ext_resource type="Script" path="res://scenes/gun.gd" id="1_cg1x5"]
-[ext_resource type="Texture2D" uid="uid://cjwl327rd6dhm" path="res://assets/art/Shotgun.png" id="2_3t75y"]
+[ext_resource type="Texture2D" uid="uid://b433t2d1s78ml" path="res://assets/art/Pistol.png" id="2_m1q5x"]
 [ext_resource type="AudioStream" uid="uid://dleblif04ob8t" path="res://assets/sfx/shoot_sound.wav" id="3_rtr8i"]
 [ext_resource type="Texture2D" uid="uid://h5p3g82uwmop" path="res://assets/art/Reload-Progress-Under.png" id="4_emkka"]
 [ext_resource type="Texture2D" uid="uid://6b4ijm1f5txq" path="res://assets/art/Reload-Progress.png" id="5_q18kg"]
@@ -11,11 +11,12 @@ script = ExtResource("1_cg1x5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(16, 0)
-texture = ExtResource("2_3t75y")
+position = Vector2(12, -4)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_m1q5x")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(39, -2)
+position = Vector2(22, -7)
 
 [node name="Shoot_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rtr8i")
@@ -31,9 +32,9 @@ one_shot = true
 [node name="Reload_Progress" type="TextureProgressBar" parent="Reload_Bar"]
 texture_filter = 1
 offset_left = -21.0
-offset_top = 26.0
+offset_top = 23.0
 offset_right = 27.0
-offset_bottom = 42.0
+offset_bottom = 39.0
 max_value = 6.0
 texture_under = ExtResource("4_emkka")
 texture_progress = ExtResource("5_q18kg")

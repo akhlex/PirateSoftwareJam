@@ -6,7 +6,6 @@ const BULLET = preload("res://scenes/bullet.tscn")
 @export var max_ammo = 6
 var curr_ammo = max_ammo
 @export var reload_time = 1.5
-var reload_segment = reload_time / max_ammo
 @export var fire_rate = 0.13
 
 
@@ -19,7 +18,6 @@ func _process(delta):
 	
 	look_at(get_global_mouse_position())
 	rotation_degrees = wrap(rotation_degrees, 0, 360)
-	#$Reload_Bar.show()
 	
 	if rotation_degrees > 90 and rotation_degrees < 270:
 		scale.y = -1
@@ -32,8 +30,6 @@ func _process(delta):
 	if Input.is_action_just_pressed("fire"):	
 		if curr_ammo > 0:
 			shoot()
-		else:
-			reload()
 			
 	elif Input.is_action_just_pressed("reload") and curr_ammo < max_ammo:
 		reload()

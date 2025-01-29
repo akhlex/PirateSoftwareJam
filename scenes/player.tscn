@@ -40,6 +40,7 @@ position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_6k4xb")
 
 [node name="Gun" parent="." instance=ExtResource("3_3olsg")]
+position = Vector2(1, 5)
 
 [node name="Move_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_0i8qe")
