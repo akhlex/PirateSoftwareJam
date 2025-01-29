@@ -6,7 +6,6 @@ extends CharacterBody2D
 @export var FRICTION = 400
 @export var max_health = 3
 @export var kb_str = 300
-
 @onready var curr_health = max_health
 
 

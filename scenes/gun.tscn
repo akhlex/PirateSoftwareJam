@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6pnj5acnod0j"]
+[gd_scene load_steps=6 format=3 uid="uid://b6pnj5acnod0j"]
 
 [ext_resource type="Script" path="res://scenes/gun.gd" id="1_cg1x5"]
 [ext_resource type="Texture2D" uid="uid://cjwl327rd6dhm" path="res://assets/art/Shotgun.png" id="2_3t75y"]
 [ext_resource type="AudioStream" uid="uid://dleblif04ob8t" path="res://assets/sfx/shoot_sound.wav" id="3_rtr8i"]
+[ext_resource type="Texture2D" uid="uid://h5p3g82uwmop" path="res://assets/art/Reload-Progress-Under.png" id="4_emkka"]
+[ext_resource type="Texture2D" uid="uid://6b4ijm1f5txq" path="res://assets/art/Reload-Progress.png" id="5_q18kg"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_cg1x5")
@@ -23,3 +25,15 @@ one_shot = true
 
 [node name="Shoot_Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Reload_Bar" type="Node2D" parent="."]
+
+[node name="Reload_Progress" type="TextureProgressBar" parent="Reload_Bar"]
+texture_filter = 1
+offset_left = -21.0
+offset_top = 26.0
+offset_right = 27.0
+offset_bottom = 42.0
+max_value = 6.0
+texture_under = ExtResource("4_emkka")
+texture_progress = ExtResource("5_q18kg")

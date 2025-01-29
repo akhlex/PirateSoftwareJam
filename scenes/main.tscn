@@ -58,8 +58,8 @@ rotation = 0.0137669
 
 [node name="Hearts_Container" parent="Player" instance=ExtResource("4_0q5n1")]
 offset_left = -28.0
-offset_top = -58.0
+offset_top = -43.0
 offset_right = 28.0
-offset_bottom = -42.0
+offset_bottom = -27.0
 
 [connection signal="timeout" from="Mob_Timer" to="." method="_on_mob_timer_timeout"]
