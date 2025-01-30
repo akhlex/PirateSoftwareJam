@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rkapouwukctq"
-path="res://.godot/imported/Play-Button-Hover.png-1fd5f229830c34d3e84a0900f167516e.ctex"
+uid="uid://2ym1xhautsrg"
+path="res://.godot/imported/Game-Over-Background.png-19a626ea8541e0aae072ad9a1c1e2bf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Play-Button-Hover.png"
-dest_files=["res://.godot/imported/Play-Button-Hover.png-1fd5f229830c34d3e84a0900f167516e.ctex"]
+source_file="res://assets/art/Game-Over-Background.png"
+dest_files=["res://.godot/imported/Game-Over-Background.png-19a626ea8541e0aae072ad9a1c1e2bf0.ctex"]
 
 [params]
 

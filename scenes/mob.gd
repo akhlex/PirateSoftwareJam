@@ -7,6 +7,7 @@ var player_scene = preload("res://scenes/player.tscn")
 var player_pos
 var target_pos
 
+
 func _process(delta):
 	player_pos = player.position
 	target_pos = (player_pos - position).normalized() 
@@ -20,4 +21,5 @@ func _on_area_2d_area_entered(area):
 		area.get_parent().queue_free()
 		HP -= 1
 		if HP <= 0:
+			Global.score += 1
 			queue_free() 

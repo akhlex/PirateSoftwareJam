@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rkapouwukctq"
-path="res://.godot/imported/Play-Button-Hover.png-1fd5f229830c34d3e84a0900f167516e.ctex"
+uid="uid://c0n5a68644n76"
+path="res://.godot/imported/Main-Menu-Button.png-79689dcdbd1a6a539f10e2618ef14e4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Play-Button-Hover.png"
-dest_files=["res://.godot/imported/Play-Button-Hover.png-1fd5f229830c34d3e84a0900f167516e.ctex"]
+source_file="res://assets/art/Main-Menu-Button.png"
+dest_files=["res://.godot/imported/Main-Menu-Button.png-79689dcdbd1a6a539f10e2618ef14e4b.ctex"]
 
 [params]
 

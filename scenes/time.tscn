@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2u13q4q3cs30"]
+
+[ext_resource type="Script" path="res://scenes/time.gd" id="1_gdv5o"]
+
+[node name="Time" type="CanvasLayer"]
+script = ExtResource("1_gdv5o")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -11.0
+offset_top = 41.0
+offset_right = 30.0
+offset_bottom = 64.0
+grow_horizontal = 2
