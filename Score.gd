@@ -5,4 +5,4 @@ extends CanvasLayer
 
 
 func _process(delta):
-	$HBoxContainer/Score_Label.text = str(Global.score)
+	$Score_Label.text = "Score: " + str(Global.score)

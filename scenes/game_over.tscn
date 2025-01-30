@@ -36,4 +36,20 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_kgoyy")
 texture_hover = ExtResource("4_6q2kh")
 
+[node name="Final_Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 384.0
+offset_right = 616.0
+offset_bottom = 407.0
+text = "hello"
+
+[node name="Final_Time" type="Label" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 320.0
+offset_right = 616.0
+offset_bottom = 343.0
+text = "my "
+
 [connection signal="pressed" from="Main_Menu_Button" to="." method="_on_main_menu_button_pressed"]
